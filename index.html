@@ -844,36 +844,99 @@
 
 <!-- CONTACT -->
 <section id="contact">
+ <section class="contact">
   <div class="contact-inner">
-    
+
     <h2 class="section-title fade-up">Contactez-moi</h2>
-    <p class="section-sub fade-up" style="margin:0 auto;">Vous avez un projet ? Une question ? N'hésitez pas à m'écrire, je vous répondrai dans les plus brefs délais.</p>
-    <form class="contact-form fade-up" id="contactForm" onsubmit="handleSubmit(event)">
+
+    <p class="section-sub fade-up" style="margin:0 auto;">
+      Vous avez un projet ? Une question ? N'hésitez pas à m'écrire,
+      je vous répondrai dans les plus brefs délais.
+    </p>
+
+    <form
+      class="contact-form fade-up"
+      action="https://formspree.io/f/mbdvkken"
+      method="POST"
+    >
+
       <div class="form-row">
+
         <div class="form-group">
           <label for="fname">Prénom</label>
-          <input type="text" id="fname" placeholder="Votre prénom" required/>
+          <input
+            type="text"
+            id="fname"
+            name="prenom"
+            placeholder="Votre prénom"
+            required
+          >
         </div>
+
         <div class="form-group">
           <label for="lname">Nom</label>
-          <input type="text" id="lname" placeholder="Votre nom"/>
+          <input
+            type="text"
+            id="lname"
+            name="nom"
+            placeholder="Votre nom"
+          >
         </div>
+
       </div>
+
       <div class="form-group">
         <label for="email">E-mail</label>
-        <input type="email" id="email" placeholder="email@exemple.com" required/>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="email@exemple.com"
+          required
+        >
       </div>
+
       <div class="form-group">
-        <label for="sujet">Sujet</label>
-        <input type="text" id="sujet" placeholder="Objet de votre message"/>
+        <label for="subject">Sujet</label>
+        <input
+          type="text"
+          id="subject"
+          name="subject"
+          placeholder="Objet de votre message"
+        >
       </div>
+
       <div class="form-group">
-        <label for="msg">Message</label>
-        <textarea id="msg" placeholder="Décrivez votre projet ou votre question..." required></textarea>
+        <label for="message">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="6"
+          placeholder="Décrivez votre projet ou votre question..."
+          required
+        ></textarea>
       </div>
+
+      <!-- Désactiver le captcha Formspree (optionnel) -->
+      <input type="hidden" name="_captcha" value="false">
+
+      <!-- Objet du mail -->
+      <input type="hidden" name="_subject" value="Nouveau message depuis mon Portfolio">
+
       <div class="form-submit">
-        <button type="submit" class="btn btn-primary" style="min-width:200px;">Envoyer le message</button>
+        <button
+          type="submit"
+          class="btn btn-primary"
+          style="min-width:200px;"
+        >
+          Envoyer le message
+        </button>
       </div>
+
+    </form>
+
+  </div>
+</section>
       <div class="form-msg" id="formMsg"></div>
     </form>
     <div class="social-links fade-up">
